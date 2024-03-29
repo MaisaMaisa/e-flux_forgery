@@ -174,7 +174,11 @@ footer span:first-child{
     }
 
     .header-inner-left{
-        padding: 4% 2%;
+        padding: 4% 5%;
+    }
+
+    .header-inner-right img{
+        margin: 5%!important;
     }
 
     .article-header .text {
