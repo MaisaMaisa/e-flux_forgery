@@ -1,62 +1,65 @@
 body{
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Add this */
+
+    overflow-x: hidden;
 }
 
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+/* HEADER STYLES */
 
 header{
     display: flex;
     top: 0;
     margin: 0;
     padding: 0;
-    border: 0;
+
     width: 100%;
     height: 65px;
-    background-color: #fff;
-}
 
-.header-inner-left{
-    width: 60%;
-    padding: 1.3% 2%;
+    background-color: #fff;
+    border: 0;
 }
 
 header a{
-    color: red;
-    text-decoration: none;
     font-size: 1.7em;
+    text-decoration: none;
+    color: red;
 }
 
 header a:first-child{
     font-weight: bold;
 }
 
+.header-inner-left{
+    padding: 1.3% 2%;
+    width: 60%;
+}
+
 .header-inner-right{
     display: flex;
     justify-content: end;
-    width: 40%;
     padding: 1.3% 2%;
+    width: 40%;
 }
 
-.header-inner-right button,
-.header-inner-right img{
+.header-inner-right button{
+    margin-left: 10px;
+    font-size: 0.9em;
     background-color: transparent;
     border: solid 0.5px lightgrey; 
-    font-size: 0.9em;
-    margin-left: 10px;
 }
 
 .header-inner-right img{
+    margin-left: 10px;
     width: 25px;
     border: none;
 }
 
-/* ARTICLE HEADER IMAGE */
+/* ARTICLE HEADER IMAGE STYLES */
 
 .article-header {
     position: relative;
@@ -70,34 +73,33 @@ header a:first-child{
 
 .article-header .text {
     position: absolute;
-    max-width: 100%;
-    text-align: center;
-    /* padding: 0 5%; */
-    font-size: 60px;
-    line-height: 1;
     top: 5vh;
-    color: white;
     margin: 0 10%;
+    max-width: 100%;
+
+    font-size: 60px;
+    text-align: center;
+    line-height: 1;
+
+    color: white;
 }
 
 .article-header .caption {
     position: relative;
     margin: 5px 0 0 19.2118226601%;
+    padding-bottom: 0.5rem;
+
     font-size: 0.8rem;
     color: grey;
-    padding-bottom: 0.5rem;
 }
 
-.article-header .text {
-    bottom: 10%;
-}
-
-/* ARTICLE BODY */
+/* ARTICLE BODY STYLES -- PROBS WHERE YOU WANT TO STYLE YOUR CONTENT*/
 .article-content{
-    margin-left: 19.2118226601%;
     position: relative;
+    margin-left: 19.2118226601%;
     padding-bottom: 3.1rem;
     width: 61.5763546798%;
+
     z-index: 1;
 }
 
@@ -105,19 +107,35 @@ header a:first-child{
     font-size: 1rem;
 }
 
-/* FOOTER */
+/* FOOTER STYLES */
+
 footer{
     display: flex;
     top: 0;
     margin: 0;
     padding: 0;
-    border: 0;
-    width: 100%;
+
+    /* width: 100%; */
     height: 200px;
-    background-color: #fff;
-    border-top: solid 1px lightgrey;
 
     font-weight: 100;
+    background-color: #fff;
+    border: 0;
+    border-top: solid 1px lightgrey;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+footer a:hover{
+    color: lightgrey;
+}
+
+.column{
+    width: 32%;
 }
 
 .footer-inner-left{
@@ -125,26 +143,12 @@ footer{
 }
 
 footer span{
-    text-decoration: none;
     font-size: 1.7em;
+    text-decoration: none;
 }
 
 footer span:first-child{
     font-weight: bold;
-}
-
-.column{
-    width: 32%;
-}
-
-footer a{
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s ease; /* Add this */
-}
-
-footer a:hover{
-    color: lightgrey;
 }
 
 .footer-inner-rightest{
@@ -154,9 +158,44 @@ footer a:hover{
 }
 
 .footer-inner-rightest button{
-    background-color: transparent;
-    border: solid 0.5px lightgrey; 
-    font-size: 0.9em;
     margin-left: 10px;
     height: 25px;
+
+    font-size: 0.9em;
+    background-color: transparent;
+    border: solid 0.5px lightgrey; 
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media only screen and (max-width: 736px) {
+    .mobile-hide{
+        display: none;
+    }
+
+    .header-inner-left{
+        padding: 4% 2%;
+    }
+
+    .article-header .text {
+        font-size: 40px;
+    }
+
+    .article-header .caption {
+        margin: 5px 0 0 5%;
+    }
+
+    .article-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .article-content p{
+        margin: 5%;
+    }
+
+    footer{
+        padding-left: 5%;
+    }
+
 }
