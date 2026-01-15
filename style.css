@@ -74,8 +74,7 @@ header a:first-child{
 .article-header .text {
     position: absolute;
     top: 5vh;
-    margin: 0 10%;
-    max-width: 100%;
+    width: 100%;
 
     font-size: 60px;
     text-align: center;
